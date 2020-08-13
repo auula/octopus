@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Octopus Login</title>
-		<link rel="stylesheet" type="text/css" href="static/css/semantic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css"/>
+		<link rel='stylesheet prefetch' href='semantic-ui/components/icon.min.css'>
 		 <style type="text/css">
 		    body > .grid {
 		      height: 100%;
@@ -14,24 +15,45 @@
 		    .column {
 		      max-width: 450px;
 		    }
+			.captcha {
+				    margin-top: 20px;
+					width: 80px;
+					height: 40px;
+			}
 		  </style>
 	</head>
 	<body>
 		<div class="ui container middle aligned  grid  ">
 			<div class="equal width row centered">
 			    <div class="column">
-					 <img class="ui ounded image" src="static/img/login-banner.gif">
+					 <img class="ui ounded image" src="assets/img/login-banner.gif">
 				</div>
 			    <div class="column">
-					<h1 class="ui dividing header">Octopus Dashboard.</h1>
-					<form class="ui form">
+					<h1 class="ui dividing header olive"><i class="user outline icon"></i>Octopus Dashboard Sign In</h1>
+					<form class="ui form segment"" id="login-form">
 					  <div class="field">
 					    <label>Account</label>
-					    <input type="text" name="account" placeholder="你的账号">
+					    <input type="text" name="account" placeholder="your account">
 					  </div>
 					  <div class="field">
 					    <label>Password</label>
-					    <input type="text" name="password" placeholder="你的密码">
+					    <input type="text" name="password" placeholder="your password">
+					  </div>
+					  <div class="field center">
+					   <div class="ui grid">
+					     <div class="ten wide column">
+							 <div class="field">
+							   <label>Captcha</label>
+							   <input type="text" name="captcha" placeholder="captcha">
+							 </div>
+						 </div>
+					     <div class="six wide column">
+							<div class="field">
+								<img class="captcha" src="data:image/png;base64,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">
+							 </div>
+						 </div>
+					   </div>
+					   
 					  </div>
 					  <div class="field">
 					    <div class="ui checkbox">
@@ -39,18 +61,62 @@
 					      <label>Record Me</label>
 					    </div>
 					  </div>
-					  <button class="ui button" type="reset">RESET</button>
-					  <button class="positive ui button" type="submit">LOGIN</button>
-
+					  <button class="ui button" type="reset"><i class="sync icon"></i>RESET</button>
+					  <button class="positive ui button" type="submit"><i class="key icon"></i>LOGIN</button>
+					  
+					   <!--前端：存放错误记录提示-->
+					 <div class="ui  error message"></div>
 					</form>
 				</div>
 			  </div>
+			  
 		  
 		</div>
 	</body>
-	<script src="static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="static/js/semantic.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="semantic-ui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="semantic-ui/semantic.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		   $('.ui.checkbox').checkbox();   //使得单选框可以被选中
+		   $('#login-form')
+		     .form({
+		       fields: {
+		         account: {
+		           identifier: 'account',
+		           rules: [
+		             {
+		               type   : 'empty',
+		               prompt : 'Please enter your account'
+		             }
+		           ]
+		         },
+		         password: {
+		           identifier: 'password',
+		           rules: [
+		             {
+		               type   : 'empty',
+		               prompt : 'Please enter a password'
+		             },
+		             {
+		               type   : 'minLength[6]',
+		               prompt : 'Your password must be at least {ruleValue} characters'
+		             }
+		           ]
+		         },
+				 captcha: {
+				   identifier: 'captcha',
+				   rules: [
+				     {
+				       type   : 'empty',
+				       prompt : 'Please enter a captcha'
+				     },
+				     {
+				       type   : 'minLength[5]',
+				       prompt : 'Your captcha must be at least {ruleValue} characters'
+				     }
+				   ]
+				 }
+		       }
+		     })
+		   ;
 	</script>
 </html>
