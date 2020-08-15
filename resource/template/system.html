@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Octopus | 环境配置</title>
+		<link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css"/>
+		<link rel='stylesheet prefetch' href='semantic-ui/components/icon.min.css'>
+		<style>
+			.comtent {
+					padding-left: 80px;
+				    padding-right: 80px;
+				    padding-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class=" ui container">
+			<div class="ui left fixed vertical menu pointing secondary green " style="font-size: 18px;">
+			      <h1 class="item ">Octopus UI</h1>
+			      <a class="item"><i class="server icon"></i> HOSTS </a>
+			      <a class="item"><i class="wrench icon"></i>CONFIG </a>
+				  <a class="active item"><i class="cog icon"></i>SYSTEM </a>
+				  <!-- <a class="item"><i class="tachometer alternate icon"></i>STATUS INFO </a> -->
+				  <h2 class="ui dividing header"></h2>
+				  <div class="item">
+					  <button class="negative big ui button "><i class="sign out alternate icon"></i></i>SIGNOUT </button>
+				  </div>
+			</div>
+			<div class="ui right fixed vertical menu">
+				<!-- <a href="https://www.google.com" class="item">
+					<button class="positive ui big button"><i class="tasks icon"></i>Add Host</button>
+				</a> -->
+				<a class="item">
+				    <div class="ui small teal label">12</div><i class="heartbeat icon green"></i>ONLINE</a>
+				<a class="item">
+				    <div class="ui small red label">4</div><i class="close icon red"></i></i>OFFLINE</a>	
+				  
+				  <div class="item">
+				  		<div class="ui wide skyscraper test ad centerd" data-text="">
+							<a href="https://www.vultr.com/?ref=7214475"><img src="https://www.vultr.com/media/banners/banner_160x600.png" width="160" height="600"></a>
+						</div>			  
+				  </div>
+				 
+			</div>
+			<div class="ui container comtent">
+				<table class="ui celled striped table">
+				  <thead>
+				    <tr><th colspan="3">System monitoring status </th>
+				  </tr></thead>
+				  <tbody>
+				    <tr>
+				      <td class="collapsing"><i class="microchip icon"></i> 当前 Goroutines 数量 </td>
+				      <td>16</td>
+				     
+				    </tr>
+				    <tr>
+				      <td><i class="hdd icon"></i> 当前内存使用量 </td>
+				      <td>25 MB</td>
+				      
+				    </tr>
+				    <tr>
+				      <td><i class="sitemap icon"></i>所有被分配的内存</td>
+				      <td>14 GB</td>
+				      
+				    </tr>
+				    <tr>
+				      <td><i class="hdd icon"></i> 内存占用量</td>
+				      <td>139 MB</td>
+				      
+				    </tr>
+				    <tr>
+				      <td><i class="trash icon"></i>内存释放次数</td>
+				      <td>168872924</td>
+				      
+				    </tr>
+				  </tbody>
+				</table>
+				<div class="html ui top attached segment"><form class="ui form">
+				      <div class="field" style="margin-top: 30px;">
+				        <label>Account</label>
+				        <input type="text" name="first-name" placeholder="0.0.0.0:22">
+				      </div>
+				      <div class="field">
+				        <label>Old Password</label>
+				        <input type="text" name="last-name" placeholder="Old Password">
+				      </div>
+				      <div class="field">
+				        <label>New Password</label>
+				        <input type="text" name="last-name" placeholder="New passwords">
+				      </div>
+				      <button class="ui button" type="reset">RESET</button>
+					  <button class="ui button green" type="submit">SUBMIT</button>
+				    </form><div class="ui top attached label">SET ADMIN PASSWORD</div></div>
+			</div>	
+			
+		</div>	
+		
+		
+	</body>
+	<script src="semantic-ui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="semantic-ui/semantic.min.js" type="text/javascript" charset="utf-8"></script>
+</html>

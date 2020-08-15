@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Octopus | 环境配置</title>
+		<link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css"/>
+		<link rel='stylesheet prefetch' href='semantic-ui/components/icon.min.css'>
+		<style>
+			.comtent {
+					padding-left: 80px;
+				    padding-right: 80px;
+				    padding-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class=" ui container">
+			<div class="ui left fixed vertical menu pointing secondary green " style="font-size: 18px;">
+			      <h1 class="item ">Octopus UI</h1>
+			      <a class="item"><i class="server icon"></i> HOSTS </a>
+			      <a class="active item"><i class="wrench icon"></i>CONFIG </a>
+				  <a class="item"><i class="cog icon"></i>SYSTEM </a>
+				  <!-- <a class="item"><i class="tachometer alternate icon"></i>STATUS INFO </a> -->
+				  <h2 class="ui dividing header"></h2>
+				  <div class="item">
+					  <button class="negative big ui button "><i class="sign out alternate icon"></i></i>SIGNOUT </button>
+				  </div>
+			</div>
+			<div class="ui right fixed vertical menu">
+				<!-- <a href="https://www.google.com" class="item">
+					<button class="positive ui big button"><i class="tasks icon"></i>Add Host</button>
+				</a> -->
+				<a class="item">
+				    <div class="ui small teal label">12</div><i class="heartbeat icon green"></i>ONLINE</a>
+				<a class="item">
+				    <div class="ui small red label">4</div><i class="close icon red"></i></i>OFFLINE</a>	
+				  
+				  <div class="item">
+				  		<div class="ui wide skyscraper test ad centerd" data-text="">
+							<a href="https://www.vultr.com/?ref=7214475"><img src="https://www.vultr.com/media/banners/banner_160x600.png" width="160" height="600"></a>
+						</div>			  
+				  </div>
+				 
+			</div>
+			<div class="ui container comtent">
+				<div class="html ui top attached segment"><form class="ui form">
+				      <div class="field" style="margin-top: 30px;">
+				        <label>Server Address</label>
+				        <input type="text" name="first-name" placeholder="0.0.0.0:22">
+				      </div>
+				      <div class="field">
+				        <label>Mail Account</label>
+				        <input type="text" name="last-name" placeholder="xxxx@xx.com">
+				      </div>
+				      <div class="field">
+				        <label>Mail Password</label>
+				        <input type="text" name="last-name" placeholder="your passwords">
+				      </div>
+				      <button class="ui button" type="reset">RESET</button>
+					  <button class="ui button green" type="submit">SUBMIT</button>
+				    </form><div class="ui top attached label">EMAIl SERVER CONFIG</div></div>
+					<div class="html ui top attached segment"><form class="ui form">
+					      <div class="field" style="margin-top: 30px;">
+					        <label>Redis Address</label>
+					        <input type="text" name="first-name" placeholder="0.0.0.0:22">
+					      </div>
+
+					      <div class="field">
+					        <label>Redis Password</label>
+					        <input type="text" name="last-name" placeholder="your passwords">
+					      </div>
+					      <button class="ui button" type="reset">RESET</button>
+						  <button class="ui button green" type="submit">SUBMIT</button>
+					    </form><div class="ui top attached label">REDIS SERVER CONFIG</div></div>
+			</div>
+			
+		</div>	
+		
+		
+	</body>
+	<script src="semantic-ui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="semantic-ui/semantic.min.js" type="text/javascript" charset="utf-8"></script>
+</html>
