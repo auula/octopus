@@ -15,7 +15,7 @@ func init() {
 }
 
 func main() {
-	controller.NewView(router)
-	controller.NewApi(router)
+	controller.MappingApi(router)
+	controller.MappingView(router)
 	router.Run(port)
 }

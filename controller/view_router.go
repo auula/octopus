@@ -17,12 +17,11 @@ type view struct {
 	r *gin.Engine
 }
 
-// NewView return ViewPageGroup
-func NewView(gin *gin.Engine) *view {
+// MappingView return ViewPageGroup
+func MappingView(gin *gin.Engine) {
 	view := &view{r: gin}
 	view.init()
-	view.mappingView()
-	return view
+	view.mapping()
 }
 
 func (v *view) init() {
@@ -37,7 +36,7 @@ func (v *view) init() {
 	v.r.LoadHTMLGlob(templateSrc)
 }
 
-func (v *view) mappingView() {
+func (v *view) mapping() {
 	v.r.GET("/login", func(c *gin.Context) {
 		c.HTML(200, "login.tmpl", nil)
 	})

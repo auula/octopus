@@ -7,7 +7,7 @@ import "github.com/gin-gonic/gin"
 type api struct {
 	r *gin.Engine
 }
-// NewApi return Api
-func NewApi(r *gin.Engine) *api {
-	return &Api{r:r}
+// MappingApi return Api
+func MappingApi(r *gin.Engine)  {
+	
 }
